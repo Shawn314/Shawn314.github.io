@@ -1,4 +1,11 @@
-
+---
+layout:     post
+title:      "Makefile 学习"
+date:       2019-11-20 20:21:00
+author:     "Shawn"
+tags:
+    - Linux c c++
+---
 # Table of Contents
 
 1.  [Makefile文件格式](#org4d0ab52)
