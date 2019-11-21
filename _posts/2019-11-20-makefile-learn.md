@@ -6,7 +6,7 @@ author:     "Shawn"
 tags:
     - Linux c c++
 ---
-# Table of Contents
+# 目录
 
 1.  [Makefile文件格式](#org4d0ab52)
     1.  [概述](#org709d9ec)
@@ -338,6 +338,7 @@ Makefile提供了许多[内置函数](https://www.gnu.org/software/make/manual/h
 
 -   执行多个目标
 
+``` shell
     .PHONY: cleanall cleanobj cleandiff
     
     cleanall : cleanobj cleandiff
@@ -348,11 +349,12 @@ Makefile提供了许多[内置函数](https://www.gnu.org/software/make/manual/h
     
     cleandiff :
             rm *.diff
-
+```
 上面代码可以调用不同目标，删除不同后缀名的文件，也可以调用一个目标（cleanall），删除所有指定类型的文件。
 
 -   编译C语言项目
 
+``` shell
     edit : main.o kbd.o command.o display.o
         cc -o edit main.o kbd.o command.o display.o
     main.o : main.c defs.h
@@ -366,4 +368,5 @@ Makefile提供了许多[内置函数](https://www.gnu.org/software/make/manual/h
     clean :
          rm edit main.o kbd.o command.o display.o
     .PHONY: edit clean
+```
 
