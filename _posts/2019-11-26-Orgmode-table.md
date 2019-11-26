@@ -1,42 +1,42 @@
 ---
 layout:     post
-title:      "Emacs Orgmode table 学习总结"
-date:       Tue Nov 26 20:25:35 CST 2019
+title:      "Emacs orgmode tables学习"
+date:       Tue Nov 26 20:48:10 CST 2019
 author:     "Shawn"
 tags:
-    - Emacs Orgmode table
+    - Emacs Orgmode table tutorial
 ---
-# Table of Contents
+# 目录
 
-1.  [表格创建](#org8a61c6b)
-    1.  [快捷键C-c |](#orgf4bf0b7)
-    2.  [文本转换表格](#org9fbb09e)
-2.  [行和列](#orgf5678db)
-    1.  [行列移动](#org73590c4)
-    2.  [行列添加](#org1263f7c)
-    3.  [排序](#orgbcd4377)
-3.  [单元格引用](#orgdd99c33)
-    1.  [单元格范围](#orgb5cc6c8)
-4.  [表格公式](#org06223d4)
-    1.  [简单公式](#org064b673)
-    2.  [数学函数](#orgd6175ce)
-    3.  [总结向量语法](#orgfe0b131)
-    4.  [可选模式](#org49848a4)
+1.  [表格创建](#org9fa9026)
+    1.  [输入维数建表格](#org85b57bd)
+    2.  [文本转换表格](#org9183a65)
+2.  [行和列](#org7d0772f)
+    1.  [行列移动](#org087eb79)
+    2.  [行列添加](#org8625b41)
+    3.  [排序](#org4fb47e6)
+3.  [单元格引用](#org6304e5e)
+    1.  [单元格范围](#org08db8da)
+4.  [表格公式](#org884db85)
+    1.  [简单公式](#org3ca77a1)
+    2.  [数学函数](#orgb252fc3)
+    3.  [总结向量语法](#org576305d)
+    4.  [可选模式](#orgd550614)
 
 
 
-<a id="org8a61c6b"></a>
+<a id="org9fa9026"></a>
 
 # 表格创建<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>
 
 在org-mode中创建表格有很多方式：
 
 
-<a id="orgf4bf0b7"></a>
+<a id="org85b57bd"></a>
 
-## 快捷键C-c |
+## 输入维数建表格
 
-emacs 会提示输入维数，输入之后表格就会建立
+输入C-c \|，emacs 会提示输入维数，输入之后表格就会建立
 
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -92,11 +92,11 @@ emacs 会提示输入维数，输入之后表格就会建立
 </table>
 
 
-<a id="org9fbb09e"></a>
+<a id="org9183a65"></a>
 
 ## 文本转换表格
 
-选中文本，使用快捷键 **C-c |** ，将文本转化成一个表格
+选中文本，使用快捷键C-c \|，将文本转化成一个表格
 
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -194,33 +194,33 @@ emacs 会提示输入维数，输入之后表格就会建立
 </table>
 
 
-<a id="orgf5678db"></a>
+<a id="org7d0772f"></a>
 
 # 行和列
 
 
-<a id="org73590c4"></a>
+<a id="org087eb79"></a>
 
 ## 行列移动
 
 可以使用M-up and M-down来移动行和列
 
 
-<a id="org1263f7c"></a>
+<a id="org8625b41"></a>
 
 ## 行列添加
 
 可以使用M-S-up and M-S-down来移动行和列
 
 
-<a id="orgbcd4377"></a>
+<a id="org4fb47e6"></a>
 
 ## 排序
 
 C-c ^ 
 
 
-<a id="orgdd99c33"></a>
+<a id="org6304e5e"></a>
 
 # 单元格引用
 
@@ -286,26 +286,25 @@ C-c ^
 </table>
 
 
-<a id="orgb5cc6c8"></a>
+<a id="org08db8da"></a>
 
 ## 单元格范围
 
 可以用 *..* 表达，例如@3..@8。
 
 
-<a id="org06223d4"></a>
+<a id="org884db85"></a>
 
 # 表格公式
 
 
-<a id="org064b673"></a>
+<a id="org3ca77a1"></a>
 
 ## 简单公式
 
 加入公式可以有以下几种方式：
 
-1.  在一个单元格内输入 /:=/，然后输入公式，例如$2\*2
-    Date         | Numeric | Category 1 | Category 2 |   |
+1.  在一个单元格内输入:=，然后输入公式，例如$2\*2
 
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -321,6 +320,16 @@ C-c ^
 
 <col  class="org-left" />
 </colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Date</th>
+<th scope="col" class="org-right">Numeric</th>
+<th scope="col" class="org-left">Category 1</th>
+<th scope="col" class="org-left">Category 2</th>
+<th scope="col" class="org-left">&#xa0;</th>
+</tr>
+</thead>
+
 <tbody>
 <tr>
 <td class="org-left"><span class="timestamp-wrapper"><span class="timestamp">&lt;2013-01-14 Mon&gt;</span></span></td>
@@ -407,11 +416,11 @@ C-c ^
 </tbody>
 </table>
 
-C-c \*: 在一个单元格复制语法
+C-c \*: 在一个单元格复制语法，
 C-u C-c \*: 复制语法到每一行
 
 
-<a id="orgd6175ce"></a>
+<a id="orgb252fc3"></a>
 
 ## 数学函数
 
@@ -505,7 +514,7 @@ C-u C-c \*: 复制语法到每一行
 </table>
 
 
-<a id="orgfe0b131"></a>
+<a id="org576305d"></a>
 
 ## 总结向量语法
 
@@ -705,7 +714,7 @@ Orgmode表可以利用calc中的一些函数。例如，添加一个列总和。
 </table>
 
 
-<a id="org49848a4"></a>
+<a id="orgd550614"></a>
 
 ## 可选模式
 
